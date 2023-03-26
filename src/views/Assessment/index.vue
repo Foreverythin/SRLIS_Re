@@ -1,0 +1,11 @@
+<template>
+  <h1>Assessment</h1>
+</template>
+
+<script lang="ts" setup>
+
+</script>
+
+<style scoped>
+
+</style>
