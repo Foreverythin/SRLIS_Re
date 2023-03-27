@@ -1,5 +1,5 @@
 <template>
-  <a-layout>
+  <a-layout style="height: 100%">
     <div style="width: 100%; text-align: center; margin-top: 10px;">
       <SearchBox/>
       <a-avatar id="avatar" :size="32">
@@ -37,14 +37,22 @@
         </a-menu-item>
       </a-menu>
     </a-layout-header>
-    <a-layout-content>
+    <a-layout-content id="layout-content">
       <router-view/>
     </a-layout-content>
   </a-layout>
 </template>
 
 <script lang="ts" setup>
-import {IconHome, IconUser, IconFile, IconUserGroup, IconDesktop, IconDriveFile, IconStamp} from "@arco-design/web-vue/es/icon"
+import {
+  IconHome,
+  IconUser,
+  IconFile,
+  IconUserGroup,
+  IconDesktop,
+  IconDriveFile,
+  IconStamp
+} from "@arco-design/web-vue/es/icon"
 import SearchBox from "../../components/SearchBox.vue"
 import router from "../../router/index"
 import {useRoute} from "vue-router"
@@ -78,5 +86,15 @@ watch(route, (newValue, _) => {
 
 .arco-tabs-nav-tab-list {
   margin-left: 20px;
+}
+
+#layout-content {
+  /* 渐变背景色 */
+  background: linear-gradient(180deg, #8aa7cb, #b6c2db);
+
+  /* 白灰渐变背景色 */
+  /*background: linear-gradient(180deg, #f5f5f5 0%, #ffffff 100%);*/
+
+  padding-top: 20px;
 }
 </style>
