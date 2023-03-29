@@ -8,10 +8,10 @@
     </a-col>
     <a-col :span="17">
       <a-card class="table-card" title="实验室人员与研究方向">
-        <a-table :columns="column_table1" :data="data_table1"></a-table>
+        <a-table :columns="columns_table1" :data="data_table1"></a-table>
       </a-card>
       <a-card class="table-card" title="固定人员">
-        <a-table :columns="column_table2" :data="data_table2"></a-table>
+        <a-table :columns="columns_table2" :data="data_table2"></a-table>
       </a-card>
     </a-col>
     <a-col :span="1"></a-col>
@@ -21,7 +21,7 @@
 <script lang="ts" setup>
 import FilterCard from "../../components/FilterCard.vue"
 
-const column_table1 = [
+const columns_table1 = [
   {
     'title': '序号',
     'dataIndex': 'key',
@@ -39,7 +39,7 @@ const column_table1 = [
   }
 ]
 
-const column_table2 = [
+const columns_table2 = [
   {
     'title': '序号',
     'dataIndex': 'key',

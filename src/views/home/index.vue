@@ -167,278 +167,93 @@ const columns_table4 = [
 const data_table1 = reactive([
   {
     'key': '1',
-    'base': '基地1',
-    'baseType': '基地类型1',
-    'baseLevel': '基地级别1',
-    'college': '依托学院1',
-    'department': '主管部门1',
-    'leader': '负责人1',
-    'approvalTime': '批准时间1'
   },
   {
     'key': '2',
-    'base': '基地2',
-    'baseType': '基地类型2',
-    'baseLevel': '基地级别2',
-    'college': '依托学院2',
-    'department': '主管部门2',
-    'leader': '负责人2',
-    'approvalTime': '批准时间2'
   },
   {
     'key': '3',
-    'base': '基地3',
-    'baseType': '基地类型2',
-    'baseLevel': '基地级别2',
-    'college': '依托学院2',
-    'department': '主管部门2',
-    'leader': '负责人2',
-    'approvalTime': '批准时间2'
   },
   {
     'key': '4',
-    'base': '基地4',
-    'baseType': '基地类型2',
-    'baseLevel': '基地级别2',
-    'college': '依托学院2',
-    'department': '主管部门2',
-    'leader': '负责人2',
-    'approvalTime': '批准时间2'
   },
   {
     'key': '5',
-    'base': '基地4',
-    'baseType': '基地类型2',
-    'baseLevel': '基地级别2',
-    'college': '依托学院2',
-    'department': '主管部门2',
-    'leader': '负责人2',
-    'approvalTime': '批准时间2'
   },
   {
     'key': '6',
-    'base': '基地4',
-    'baseType': '基地类型2',
-    'baseLevel': '基地级别2',
-    'college': '依托学院2',
-    'department': '主管部门2',
-    'leader': '负责人2',
-    'approvalTime': '批准时间2'
-  },
-  {
-    'key': '7',
-    'base': '基地4',
-    'baseType': '基地类型2',
-    'baseLevel': '基地级别2',
-    'college': '依托学院2',
-    'department': '主管部门2',
-    'leader': '负责人2',
-    'approvalTime': '批准时间2'
   }
 ])
 
 const data_table2 = reactive([
   {
     'key': '1',
-    'base': '基地1',
-    'director': '实验室主任1',
-    'viceDirector': '实验室副主任1',
-    'contact': '实验室联系人1',
-    'researchDirectionNum': '5',
-    'fixedNum': '100',
-    'hasFinancialCard': '是',
-    'area': '200',
-    'updateTime': '2022-10-12'
   },
   {
     'key': '2',
-    'base': '基地1',
-    'director': '实验室主任1',
-    'viceDirector': '实验室副主任1',
-    'contact': '实验室联系人1',
-    'researchDirectionNum': '5',
-    'fixedNum': '100',
-    'hasFinancialCard': '是',
-    'area': '200',
-    'updateTime': '2022-10-12'
   },
   {
     'key': '3',
-    'base': '基地1',
-    'director': '实验室主任1',
-    'viceDirector': '实验室副主任1',
-    'contact': '实验室联系人1',
-    'researchDirectionNum': '5',
-    'fixedNum': '100',
-    'hasFinancialCard': '是',
-    'area': '200',
-    'updateTime': '2022-10-12'
   },
   {
     'key': '4',
-    'base': '基地1',
-    'director': '实验室主任1',
-    'viceDirector': '实验室副主任1',
-    'contact': '实验室联系人1',
-    'researchDirectionNum': '5',
-    'fixedNum': '100',
-    'hasFinancialCard': '是',
-    'area': '200',
-    'updateTime': '2022-10-12'
   },
   {
     'key': '5',
-    'base': '基地1',
-    'director': '实验室主任1',
-    'viceDirector': '实验室副主任1',
-    'contact': '实验室联系人1',
-    'researchDirectionNum': '5',
-    'fixedNum': '100',
-    'hasFinancialCard': '是',
-    'area': '200',
-    'updateTime': '2022-10-12'
   },
   {
     'key': '6',
-    'base': '基地1',
-    'director': '实验室主任1',
-    'viceDirector': '实验室副主任1',
-    'contact': '实验室联系人1',
-    'researchDirectionNum': '5',
-    'fixedNum': '100',
-    'hasFinancialCard': '是',
-    'area': '200',
-    'updateTime': '2022-10-12'
   },
   {
     'key': '7',
-    'base': '基地1',
-    'director': '实验室主任1',
-    'viceDirector': '实验室副主任1',
-    'contact': '实验室联系人1',
-    'researchDirectionNum': '5',
-    'fixedNum': '100',
-    'hasFinancialCard': '是',
-    'area': '200',
-    'updateTime': '2022-10-12'
   }
 ])
 
 const data_table3 = reactive([
   {
     'key': '1',
-    'base': '基地1',
-    'committeeNum': '5',
-    'officeNum': '5',
-    'activityNum': '5',
-    'hasCooperativeProject': '是'
   },
   {
     'key': '2',
-    'base': '基地1',
-    'committeeNum': '5',
-    'officeNum': '5',
-    'activityNum': '5',
-    'hasCooperativeProject': '是',
   },
   {
     'key': '3',
-    'base': '基地1',
-    'committeeNum': '5',
-    'officeNum': '5',
-    'activityNum': '5',
-    'hasCooperativeProject': '是',
   },
   {
     'key': '4',
-    'base': '基地1',
-    'committeeNum': '5',
-    'officeNum': '5',
-    'activityNum': '5',
-    'hasCooperativeProject': '是',
   },
   {
     'key': '5',
-    'base': '基地1',
-    'committeeNum': '5',
-    'officeNum': '5',
-    'activityNum': '5',
-    'hasCooperativeProject': '是',
   },
   {
     'key': '6',
-    'base': '基地1',
-    'committeeNum': '5',
-    'officeNum': '5',
-    'activityNum': '5',
-    'hasCooperativeProject': '是',
   },
   {
     'key': '7',
-    'base': '基地1',
-    'committeeNum': '5',
-    'officeNum': '5',
-    'activityNum': '5',
-    'hasCooperativeProject': '是',
   }
 ])
 
 const data_table4 = reactive([
   {
     'key': '1',
-    'base': '基地1',
-    'yearlyAssessmentTime': '2023-02-11',
-    'yearlyAssessmentResult': '优秀',
-    'periodAssessmentLevel': '2023-02-13',
-    'periodAssessmentResult': '优秀'
   },
   {
     'key': '2',
-    'base': '基地1',
-    'yearlyAssessmentTime': '2023-02-11',
-    'yearlyAssessmentResult': '优秀',
-    'periodAssessmentLevel': '2023-02-13',
-    'periodAssessmentResult': '优秀'
   },
   {
     'key': '3',
-    'base': '基地1',
-    'yearlyAssessmentTime': '2023-02-11',
-    'yearlyAssessmentResult': '优秀',
-    'periodAssessmentLevel': '2023-02-13',
-    'periodAssessmentResult': '优秀'
   },
   {
     'key': '4',
-    'base': '基地1',
-    'yearlyAssessmentTime': '2023-02-11',
-    'yearlyAssessmentResult': '优秀',
-    'periodAssessmentLevel': '2023-02-13',
-    'periodAssessmentResult': '优秀'
   },
   {
     'key': '5',
-    'base': '基地1',
-    'yearlyAssessmentTime': '2023-02-11',
-    'yearlyAssessmentResult': '优秀',
-    'periodAssessmentLevel': '2023-02-13',
-    'periodAssessmentResult': '优秀'
   },
   {
     'key': '6',
-    'base': '基地1',
-    'yearlyAssessmentTime': '2023-02-11',
-    'yearlyAssessmentResult': '优秀',
-    'periodAssessmentLevel': '2023-02-13',
-    'periodAssessmentResult': '优秀'
   },
   {
     'key': '7',
-    'base': '基地1',
-    'yearlyAssessmentTime': '2023-02-11',
-    'yearlyAssessmentResult': '优秀',
-    'periodAssessmentLevel': '2023-02-13',
-    'periodAssessmentResult': '优秀'
   }
 ])
 </script>
