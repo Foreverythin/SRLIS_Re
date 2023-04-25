@@ -29,10 +29,10 @@
 </template>
 
 <script lang="ts" setup>
+import {reactive} from "vue"
 // 异步加载组件SideBar
 import { defineAsyncComponent } from 'vue'
 const SideBar = defineAsyncComponent(() => import('../../components/SideBar.vue'))
-import {reactive} from "vue"
 
 const columns_table1 = [
   {
