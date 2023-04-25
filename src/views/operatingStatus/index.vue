@@ -7,7 +7,7 @@
 <!--      </a-affix>-->
     </a-col>
     <a-col :span="17">
-      <a-card title="考核状态">
+      <a-card title="运行状态">
         <a-table :columns="columns" :data="data" :bordered="{cell:true}" :stripe="true"></a-table>
       </a-card>
     </a-col>
@@ -27,23 +27,23 @@ const columns = [
     'align': ('center' as 'center'),
   },
   {
-    'title': '考核种类',
+    'title': '类型',
     'dataIndex': 'type',
     'align': ('center' as 'center'),
   },
   {
-    'title': '考核时间',
+    'title': '时间',
     'dataIndex': 'time',
     'align': ('center' as 'center'),
   },
   {
-    'title': '结果',
-    'dataIndex': 'result',
+    'title': '地点',
+    'dataIndex': 'place',
     'align': ('center' as 'center'),
   },
   {
-    'title': '文件',
-    'dataIndex': 'file',
+    'title': '备注',
+    'dataIndex': 'remark',
     'align': ('center' as 'center'),
   }
 ]
@@ -51,28 +51,39 @@ const columns = [
 const data = [
   {
     'key': '1',
-    'type': '验收评估',
-    'time': '2017',
-    'result': '优秀',
-    'file': '验收评估.pdf',
+    'type': '学术委员会',
+    'time': '',
+    'place': '',
+    'remark': '',
   },
   {
     'key': '2',
-    'type': '年度考核',
-    'time': '2018',
-    'result': '优秀',
-    'file': '年度考核.pdf',
+    'type': '主任办公会',
+    'time': '',
+    'place': '',
+    'remark': '',
   },
   {
     'key': '3',
-    'type': '周期评估',
-    'time': '2021',
-    'result': '良好',
-    'file': '周期评估.pdf',
+    'type': '主任办公会',
+    'time': '',
+    'place': '',
+    'remark': '',
   },
-  {},
-  {},
-  {}
+  {
+    'key': '4',
+    'type': '实验室开发活动',
+    'time': '',
+    'place': '',
+    'remark': '',
+  },
+  {
+    'key': '5',
+    'type': '开发合作课题',
+    'time': '',
+    'place': '',
+    'remark': '',
+  }
 ]
 </script>
 

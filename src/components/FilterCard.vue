@@ -1,5 +1,5 @@
 <template>
-  <a-card title="筛选栏" style="margin-right: 20px;">
+  <a-card title="筛选" style="margin-right: 20px;">
     <a-space direction="vertical" size="mini" fill>
       <template v-for="item in filterOptions">
         <a-select :placeholder="item.name" allow-clear size="large">

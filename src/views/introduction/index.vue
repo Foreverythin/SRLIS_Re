@@ -2,9 +2,9 @@
   <a-row>
     <a-col :span="1"></a-col>
     <a-col :span="5">
-      <a-affix :offset-top="20">
-        <FilterCard></FilterCard>
-      </a-affix>
+<!--      <a-affix :offset-top="20">-->
+      <SideBar></SideBar>
+<!--      </a-affix>-->
     </a-col>
     <a-col :span="17">
       <a-card class="table-card" title="实验室简介">
@@ -15,7 +15,7 @@
         </a-card>
       </a-card>
       <a-card class="table-card" title="实验室照片">
-        <a-table :columns="columns" :data="data" />
+        <a-table :columns="columns" :data="data" :bordered="{cell:true}" :stripe="true" />
       </a-card>
     </a-col>
     <a-col :span="1"></a-col>
@@ -23,20 +23,25 @@
 </template>
 
 <script lang="ts" setup>
-import FilterCard from "../../components/FilterCard.vue"
+// 异步加载组件SideBar
+import { defineAsyncComponent } from 'vue'
+const SideBar = defineAsyncComponent(() => import('../../components/SideBar.vue'))
 
 const columns = [
   {
     'title': '序号',
     'dataIndex': 'key',
+    'align': ('center' as 'center'),
   },
   {
     'title': '类型',
     'dataIndex': 'type',
+    'align': ('center' as 'center'),
   },
   {
     'title': '照片',
     'dataIndex': 'photo',
+    'align': ('center' as 'center'),
   }
 ]
 
@@ -50,7 +55,11 @@ const data = [
     'key': '2',
     'type': '仪器设备',
     'photo': '振动台.JPG',
-  }
+  },
+  {},
+  {},
+  {},
+  {}
 ]
 </script>
 

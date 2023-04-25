@@ -2,26 +2,26 @@
   <a-row>
     <a-col :span="1"></a-col>
     <a-col :span="5">
-      <a-affix :offset-top="20">
-        <FilterCard></FilterCard>
-      </a-affix>
+<!--      <a-affix :offset-top="20">-->
+      <SideBar></SideBar>
+<!--      </a-affix>-->
     </a-col>
     <a-col :span="17">
       <!--  基本信息表  -->
       <a-card title="基本信息" class="table-card">
-        <a-table :columns="columns_table1" :data="data_table1" :scroll="{x: 1300}" />
+        <a-table :columns="columns_table1" :data="data_table1" :scroll="{x: 1300}" :bordered="{cell:true}" :stripe="true" />
       </a-card>
       <!--  基本情况表  -->
       <a-card title="基本情况" class="table-card">
-        <a-table :columns="columns_table2" :data="data_table2" :scroll="{x: 1300}" />
+        <a-table :columns="columns_table2" :data="data_table2" :scroll="{x: 1300}" :bordered="{cell:true}" :stripe="true" />
       </a-card>
       <!--  运行状态表  -->
       <a-card title="运行状态" class="table-card">
-        <a-table :columns="columns_table3" :data="data_table3" :scroll="{x: 1300}" />
+        <a-table :columns="columns_table3" :data="data_table3" :scroll="{x: 1300}" :bordered="{cell:true}" :stripe="true" />
       </a-card>
       <!--  考核状态表   -->
       <a-card title="考核状态" class="table-card">
-        <a-table :columns="columns_table2" :data="data_table2" :scroll="{x: 1300}" />
+        <a-table :columns="columns_table4" :data="data_table4" :scroll="{x: 1300}" :bordered="{cell:true}" :stripe="true" />
       </a-card>
     </a-col>
     <a-col :span="1"></a-col>
@@ -29,233 +29,181 @@
 </template>
 
 <script lang="ts" setup>
-import FilterCard from "../../components/FilterCard.vue"
+// 异步加载组件SideBar
+import { defineAsyncComponent } from 'vue'
+const SideBar = defineAsyncComponent(() => import('../../components/SideBar.vue'))
 import {reactive} from "vue"
 
 const columns_table1 = [
   {
     'title': '序号',
-    'dataIndex': 'key'
+    'dataIndex': 'key',
+    'align': ('center' as 'center'),
+    'cell-style': {'width': '500px'}
   },
   {
     'title': '基地',
-    'dataIndex': 'base'
+    'dataIndex': 'base',
+    'align': ('center' as 'center'),
   },
   {
     'title': '基地类型',
-    'dataIndex': 'baseType'
+    'dataIndex': 'baseType',
+    'align': ('center' as 'center'),
   },
   {
     'title': '基地级别',
-    'dataIndex': 'baseLevel'
+    'dataIndex': 'baseLevel',
+    'align': ('center' as 'center'),
   },
   {
     'title': '依托学院',
-    'dataIndex': 'college'
+    'dataIndex': 'college',
+    'align': ('center' as 'center'),
   },
   {
     'title': '主管部门',
-    'dataIndex': 'department'
+    'dataIndex': 'department',
+    'align': ('center' as 'center'),
   },
   {
     'title': '负责人',
-    'dataIndex': 'leader'
+    'dataIndex': 'leader',
+    'align': ('center' as 'center'),
   },
   {
     'title': '批准时间',
-    'dataIndex': 'approvalTime'
+    'dataIndex': 'approvalTime',
+    'align': ('center' as 'center'),
   }
 ]
 
 const columns_table2 = [
   {
     'title': '序号',
-    'dataIndex': 'key'
+    'dataIndex': 'key',
+    'align': ('center' as 'center'),
   },
   {
     'title': '基地',
-    'dataIndex': 'base'
+    'dataIndex': 'base',
+    'align': ('center' as 'center'),
   },
   {
     'title': '实验室主任',
-    'dataIndex': 'director'
+    'dataIndex': 'director',
+    'align': ('center' as 'center'),
   },
   {
     'title': '实验室副主任',
-    'dataIndex': 'viceDirector'
+    'dataIndex': 'viceDirector',
+    'align': ('center' as 'center'),
   },
   {
     'title': '实验室联系人',
-    'dataIndex': 'contact'
+    'dataIndex': 'contact',
+    'align': ('center' as 'center'),
   },
   {
     'title': '研究方向数量',
-    'dataIndex': 'researchDirectionNum'
+    'dataIndex': 'researchDirectionNum',
+    'align': ('center' as 'center'),
   },
   {
     'title': '固定人员数',
-    'dataIndex': 'fixedNum'
+    'dataIndex': 'fixedNum',
+    'align': ('center' as 'center'),
   },
   {
     'title': '是否财务设立专卡',
-    'dataIndex': 'hasFinancialCard'
+    'dataIndex': 'hasFinancialCard',
+    'align': ('center' as 'center'),
   },
   {
     'title': '实验室场地面积',
-    'dataIndex': 'area'
+    'dataIndex': 'area',
+    'align': ('center' as 'center'),
   },
   {
     'title': '实验室简介更新时间',
-    'dataIndex': 'updateTime'
+    'dataIndex': 'updateTime',
+    'align': ('center' as 'center'),
   }
 ]
 
 const columns_table3 = [
   {
     'title': '序号',
-    'dataIndex': 'key'
+    'dataIndex': 'key',
+    'align': ('center' as 'center'),
   },
   {
     'title': '基地',
-    'dataIndex': 'base'
+    'dataIndex': 'base',
+    'align': ('center' as 'center'),
   },
   {
     'title': '本年度召开学术委员会次数',
-    'dataIndex': 'committeeNum'
+    'dataIndex': 'committeeNum',
+    'align': ('center' as 'center'),
   },
   {
     'title': '本年度召开主任办公会次数',
-    'dataIndex': 'officeNum'
+    'dataIndex': 'officeNum',
+    'align': ('center' as 'center'),
   },
   {
     'title': '本年度实验室开放活动次数',
-    'dataIndex': 'activityNum'
+    'dataIndex': 'activityNum',
+    'align': ('center' as 'center'),
   },
   {
     'title': '本年度是否开展开放合作课题',
-    'dataIndex': 'hasCooperativeProject'
+    'dataIndex': 'hasCooperativeProject',
+    'align': ('center' as 'center'),
   }
 ]
 
 const columns_table4 = [
   {
     'title': '序号',
-    'dataIndex': 'key'
+    'dataIndex': 'key',
+    'align': ('center' as 'center'),
   },
   {
     'title': '基地',
-    'dataIndex': 'base'
+    'dataIndex': 'base',
+    'align': ('center' as 'center'),
   },
   {
     'title': '最新年度考核时间',
-    'dataIndex': 'yearlyAssessmentTime'
+    'dataIndex': 'yearlyAssessmentTime',
+    'align': ('center' as 'center'),
   },
   {
     'title': '最新年度考核结果',
-    'dataIndex': 'yearlyAssessmentResult'
+    'dataIndex': 'yearlyAssessmentResult',
+    'align': ('center' as 'center'),
   },
   {
     'title': '最新周期考核时间',
-    'dataIndex': 'periodAssessmentTime'
+    'dataIndex': 'periodAssessmentTime',
+    'align': ('center' as 'center'),
   },
   {
     'title': '最新周期考核结果',
-    'dataIndex': 'periodAssessmentResult'
+    'dataIndex': 'periodAssessmentResult',
+    'align': ('center' as 'center'),
   }
 ]
 
-const data_table1 = reactive([
-  {
-    'key': '1',
-  },
-  {
-    'key': '2',
-  },
-  {
-    'key': '3',
-  },
-  {
-    'key': '4',
-  },
-  {
-    'key': '5',
-  },
-  {
-    'key': '6',
-  }
-])
+const data_table1 = reactive([{}, {}, {}, {}, {}, {}])
 
-const data_table2 = reactive([
-  {
-    'key': '1',
-  },
-  {
-    'key': '2',
-  },
-  {
-    'key': '3',
-  },
-  {
-    'key': '4',
-  },
-  {
-    'key': '5',
-  },
-  {
-    'key': '6',
-  },
-  {
-    'key': '7',
-  }
-])
+const data_table2 = reactive([{}, {}, {}, {}, {}, {}])
 
-const data_table3 = reactive([
-  {
-    'key': '1',
-  },
-  {
-    'key': '2',
-  },
-  {
-    'key': '3',
-  },
-  {
-    'key': '4',
-  },
-  {
-    'key': '5',
-  },
-  {
-    'key': '6',
-  },
-  {
-    'key': '7',
-  }
-])
+const data_table3 = reactive([{}, {}, {}, {}, {}, {}])
 
-const data_table4 = reactive([
-  {
-    'key': '1',
-  },
-  {
-    'key': '2',
-  },
-  {
-    'key': '3',
-  },
-  {
-    'key': '4',
-  },
-  {
-    'key': '5',
-  },
-  {
-    'key': '6',
-  },
-  {
-    'key': '7',
-  }
-])
+const data_table4 = reactive([{}, {}, {}, {}, {}, {}])
 </script>
 
 <style scoped>

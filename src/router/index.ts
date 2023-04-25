@@ -6,8 +6,10 @@ import Empty from '../views/empty/index.vue'
 import BasicInfo from '../views/basicInfo/index.vue'
 import ResearchDirection from '../views/researchDirection/index.vue'
 import Committee from '../views/committee/index.vue'
+import OperatingStatus from '../views/operatingStatus/index.vue'
 import Assessment from '../views/assessment/index.vue'
 import Introduction from '../views/introduction/index.vue'
+import MaterialReview from '../views/materialReview/index.vue'
 
 const routes = [
     {
@@ -36,6 +38,11 @@ const routes = [
                 component: Committee
             },
             {
+                path: 'operatingStatus',
+                name: 'operatingStatus',
+                component: OperatingStatus
+            },
+            {
                 path: 'assessment',
                 name: 'assessment',
                 component: Assessment
@@ -44,6 +51,11 @@ const routes = [
                 path: 'introduction',
                 name: 'introduction',
                 component: Introduction
+            },
+            {
+                path: 'materialReview',
+                name: 'materialReview',
+                component: MaterialReview
             }
         ]
     },

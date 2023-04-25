@@ -2,17 +2,18 @@
   <a-row>
     <a-col :span="1"></a-col>
     <a-col :span="5">
-      <a-affix :offset-top="20">
-        <FilterCard></FilterCard>
-      </a-affix>
+<!--      <a-affix :offset-top="20">-->
+      <SideBar></SideBar>
+<!--      </a-affix>-->
     </a-col>
     <a-col :span="17">
       <a-card title="基本信息">
         <template #extra>
           <span>
             <a-space>
-              <a-typography-text style="font-size: 16px;">选择实验室</a-typography-text>
+              <a-typography-text style="font-size: 15px;">选择实验室</a-typography-text>
               <a-input></a-input>
+              <a-button type="primary">搜索</a-button>
             </a-space>
           </span>
         </template>
@@ -24,7 +25,9 @@
 </template>
 
 <script lang="ts" setup>
-import FilterCard from "../../components/FilterCard.vue"
+// 异步加载组件SideBar
+import { defineAsyncComponent } from 'vue'
+const SideBar = defineAsyncComponent(() => import('../../components/SideBar.vue'))
 
 const data = [
   {

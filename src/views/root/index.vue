@@ -28,12 +28,20 @@
           学术/科技委员会
         </a-menu-item>
         <a-menu-item :key="routes[4]" @click="toPage(routes[4])">
+          <IconLoop/>
+          运行状态
+        </a-menu-item>
+        <a-menu-item :key="routes[5]" @click="toPage(routes[5])">
           <IconDesktop/>
           考核状态
         </a-menu-item>
-        <a-menu-item :key="routes[5]" @click="toPage(routes[5])">
+        <a-menu-item :key="routes[6]" @click="toPage(routes[6])">
           <IconDriveFile/>
           实验室简介
+        </a-menu-item>
+        <a-menu-item :key="routes[7]" @click="toPage(routes[7])">
+          <IconFolder/>
+          材料审核
         </a-menu-item>
       </a-menu>
     </a-layout-header>
@@ -51,16 +59,18 @@ import {
   IconUserGroup,
   IconDesktop,
   IconDriveFile,
-  IconStamp
+  IconStamp,
+  IconLoop,
+  IconFolder
 } from "@arco-design/web-vue/es/icon"
 import SearchBox from "../../components/SearchBox.vue"
 import router from "../../router/index"
 import {useRoute} from "vue-router"
-import {watch} from "vue";
+import {watch} from "vue"
 
 const route = useRoute()
 
-const routes = ['/home', '/basicInfo', '/researchDirection', '/committee', '/assessment', '/introduction']
+const routes = ['/home', '/basicInfo', '/researchDirection', '/committee', '/operatingStatus', '/assessment', '/introduction', '/materialReview']
 
 const toPage = (path: string) => {
   router.replace({path: '/empty', query: {path}})

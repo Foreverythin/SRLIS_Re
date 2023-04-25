@@ -20,7 +20,7 @@ import {IconSearch} from "@arco-design/web-vue/es/icon";
 
 const selectedValue = ref('主页');
 
-const options = reactive(['主页', '基本信息', '研究方向与人员', '学术/技术委员会', '考核状态', '实验室简介']);
+const options = reactive(['主页', '基本信息', '研究方向与人员', '学术/技术委员会', '运行状态', '考核状态', '实验室简介', '材料审核']);
 
 const search = () => {
   console.log('search');

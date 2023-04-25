@@ -59,6 +59,10 @@ button:focus-visible {
   padding: 2em;
 }
 
+.arco-table-td {
+  height: 40px;
+}
+
 #app {
   width: 100%;
   /*margin: 0 auto;*/
